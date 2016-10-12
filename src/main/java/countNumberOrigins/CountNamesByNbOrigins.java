@@ -1,7 +1,7 @@
-package countFirstName;
+package countNumberOrigins;
 
 /**
- * Created by salma on 09/10/2016.
+ * Created by salma on 12/10/2016.
  */
 
 import org.apache.hadoop.conf.Configuration;
@@ -12,13 +12,13 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class CountFirstNameByOrigin {
+public class CountNamesByNbOrigins {
 
     public static void main(String[] args) throws Exception {
 
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, "count first name by origin");
-        job.setJarByClass(CountFirstNameByOrigin.class);
+        Job job = Job.getInstance(conf, "count number of first name by number of origins");
+        job.setJarByClass(CountNamesByNbOrigins.class);
 
         job.setMapperClass(Map.class);
         job.setCombinerClass(Reduce.class);
@@ -32,4 +32,5 @@ public class CountFirstNameByOrigin {
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
+
 }
