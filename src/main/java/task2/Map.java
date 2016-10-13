@@ -1,4 +1,4 @@
-package countNumberOrigins;
+package task2;
 
 /**
  * Created by salma on 12/10/2016.
@@ -18,7 +18,7 @@ public class Map extends Mapper<Object, Text, Text, IntWritable> {
 
     /**
      * @param value: line from the file which is structured as such: name; [genders]; [origins] ; version
-     * writes: list(key = number of origins, value = 1)
+     * writes: list(key = number of origins in the line, value = 1)
      */
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 
