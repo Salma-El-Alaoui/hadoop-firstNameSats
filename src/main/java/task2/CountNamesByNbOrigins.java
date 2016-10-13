@@ -2,6 +2,8 @@ package task2;
 
 /**
  * Created by salma on 12/10/2016.
+ * This MapReduce job counts the number of names by origin count.
+ * A missing/unknown origin doesn't induce a count : names with a "?" origin are considered to have 0 origin.
  */
 
 import org.apache.hadoop.conf.Configuration;

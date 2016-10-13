@@ -2,6 +2,8 @@ package task1;
 
 /**
  * Created by salma on 09/10/2016.
+ * This Map/Reduce job counts the number of names for each origin
+ * "?" is the symbol we choose for missing/unknown origins.
  */
 
 import org.apache.hadoop.conf.Configuration;

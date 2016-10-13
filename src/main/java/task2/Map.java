@@ -24,7 +24,14 @@ public class Map extends Mapper<Object, Text, Text, IntWritable> {
 
         String origins = value.toString().split(";")[2];
         String[] originsArray = origins.split(",");
-        numberOrigins.set(Integer.toString(originsArray.length));
+        //default number of origins
+        int sumOrigins = 0;
+        for(String origin : originsArray) {
+            if (origin.length() > 0 & !origin.equals("?")) {
+                sumOrigins += 1;
+            }
+        }
+        numberOrigins.set(Integer.toString(sumOrigins));
         context.write(numberOrigins, one);
     }
 }

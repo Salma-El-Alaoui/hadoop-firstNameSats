@@ -1,5 +1,12 @@
 package task3;
 
+/**
+ * Created by salma on 12/10/2016.
+ * This MapReduce job computes the proportion of male and female names.
+ * For the purpose of simplification, if the same name appears on two different lines,
+ * we consider it to be two different names.
+ */
+
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -10,9 +17,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-/**
- * Created by salma on 12/10/2016.
- */
+
 public class CountProportionGender {
     public static void main(String[] args) throws Exception {
 
