@@ -5,6 +5,8 @@ package task3;
  * This MapReduce job computes the proportion of male and female names.
  * For the purpose of simplification, if the same name appears on two different lines,
  * we consider it to be two different names.
+ * If a name has two genders, we count it once in the number of female names, once in the number of male names and only
+ * once in the total number names.
  */
 
 

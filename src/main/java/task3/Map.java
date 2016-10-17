@@ -22,8 +22,10 @@ public class Map extends Mapper<Object, Text, Text, LongWritable> {
 
     /**
      * @param value: line from the file which is structured as such: name; [genders]; [origins] ; version
-     * writes: list(key = gender (f or m) , value = 1 for the encountered gender and 0 for the opposite gender) for genders encountered in the line
-     *         if a names has two genders, we only count it once (which means the 0 for the opposite gender only appears once in the list).
+     * writes: list(key = gender (f or m) , value = 1 for the encountered gender and 0 for the opposite gender)
+     *         for genders encountered in the line.
+     *         if a name has two genders, we only count it once in the total number of names
+     *         (which means the 0 for the opposite gender only appears once in the list).
      */
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
         String genders = value.toString().split(";")[1];

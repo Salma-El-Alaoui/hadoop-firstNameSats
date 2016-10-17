@@ -26,7 +26,6 @@ public class CountFirstNameByOrigin {
         job.setCombinerClass(Reduce.class);
 
         job.setReducerClass(Reduce.class);
-
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 

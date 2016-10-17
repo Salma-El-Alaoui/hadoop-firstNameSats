@@ -15,8 +15,9 @@ public class Reduce<Key> extends Reducer<Key,LongWritable, Key,DoubleWritable> {
     /**
      * @param key: gender (f or m)
      * @param values: list(1 for the occurrences of the key gender and 0 for the occurrences of the opposite gender)
-     * To get the number of occurrences the key gender, we sum the values of the list (i.e. the number of 1s
-     * To get the number of names, we get the size of the list
+     * To get the number of occurrences the key gender, we sum the values of the list (i.e. the number of 1s)
+     * To get the number of names, we get the size of the list (if a name has both genders it only counts once in the
+     * total number of names)
      * writes: (gender, percentage of the gender in the data)
      */
     public void reduce(Key key, Iterable<LongWritable> values,
