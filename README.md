@@ -1,6 +1,6 @@
 # First Name statistics using Hadoop
 
-Each of the following packages contains a Map class, a Reduce class and a Main class to run the MapReduce Job to compute a statistic.
+Each of the following packages contains a Map class, a Reduce class and a Main class to run the MapReduce Job to compute a statistic. The file [queries.hql](https://github.com/Salma-El-Alaoui/hadoop-firstNameSats/blob/master/queries.hql) contains the hive queries to get the same statistics.
 
 You can download the jar in the releases page of the project [here](https://github.com/Salma-El-Alaoui/hadoop-firstNameSats/releases), or create it using maven's `mvn package`.
 
