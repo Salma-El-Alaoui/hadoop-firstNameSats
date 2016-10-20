@@ -28,7 +28,7 @@ collection items terminated by ","
 stored AS ORC;
 
 /**
-Insert the data from the external table to the Hive ORC table
+	Insert the data from the external table to the Hive ORC table
 **/
 INSERT OVERWRITE TABLE prenoms_opt SELECT * FROM prenoms;
 
@@ -47,7 +47,7 @@ FROM prenoms_opt
 GROUP BY size(origin);
 
 /**
-	Proportion (in%) of males or females 
+	Proportion (in%) of males and females 
 **/
 SELECT q1.gender_key, q1.absolute_count/q2.total * 100 AS proportion
 FROM
